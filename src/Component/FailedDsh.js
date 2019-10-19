@@ -7,7 +7,7 @@ class FailedDsh extends Component{
     render(){
         return(
             <div>
-               {this.props.invalid}
+               <h1>Invalid Credentials</h1>{this.props.invalid}
             </div>
         )
     }

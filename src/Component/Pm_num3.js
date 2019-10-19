@@ -7,11 +7,9 @@ class Pm_num3 extends Component {
         super(props);
         this.state = {
             confirmed: false,
-            name: "Mibel",
-            middlename:"Dangculos",
-            lastname:"Paculanang",
-            password: "Mibel@2019",
-            invalid: " Invalid credentials",
+           username: "cheery",
+            password: "pasar",
+            invalid: " ",
             inputName: "",
             inputPass: "",
         }
@@ -31,7 +29,7 @@ class Pm_num3 extends Component {
         e.preventDefault();
         var input = this.state.inputName;
         var pass = this.state.inputPass;
-        this.user = (this.state.name === input && this.state.password === pass)
+        this.user = (this.state.username === input && this.state.password === pass)
         if (this.user) {
             this.setState({ confirmed: true });
         }
@@ -43,7 +41,7 @@ class Pm_num3 extends Component {
     render() {
         let value = '';
         if (this.user) {
-            value = <Dashboard name={this.state.name} middlename= {this.state.middlename} lastname={this.state.lastname}/>;
+            value = <Dashboard username={this.state.username}/>;
         } else if (this.user === false) {
             value = <FailedDsh invalid={this.state.invalid}/>;
         }
